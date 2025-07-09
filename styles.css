@@ -36,7 +36,7 @@ div#tswsidecol {
 div#tswcontent {
 	float: right;
 	width: 80%;
-	color: #ffffff;                 
+	color: #ffffff;
 	background-color: #4c00ff;
 }
 
@@ -81,14 +81,16 @@ a href {
 	width: 240px;
 	height: 200px;
 }
-.aboutmeimg{
- width:400px;
- height:300px;
-}
-.textlink{
-	color:#fff;
+
+.aboutmeimg {
+	width: 400px;
+	height: 350px;
 }
 
-p{
-	text-align:wrap;
+.textlink {
+	color: #fff;
+}
+
+p {
+	text-align: wrap;
 }
