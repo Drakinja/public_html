@@ -24,6 +24,9 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+img#green-gompei{
+color:green;
+}
 
 #super-gompei {
     filter: hue-rotate(180deg) sepia(calc(var(--gompei-count) * 10%)) saturate(calc(clamp(0, var(--gompei-count), 10) * 40% + 100%));
@@ -32,16 +35,16 @@ body {
 }
 
 #blue-gompei {
-    filter: hue-rotate(180deg) sepia(calc(var(--gompei-count) * 10%)) saturate(calc(clamp(0, var(--gompei-count), 10) * 40% + 100%));
+    filter: hue-rotate(90deg) sepia(calc(var(--gompei-count) * 10%)) saturate(calc(clamp(0, var(--gompei-count), 10) * 40% + 100%));
     transform: rotateX(90deg);
     /* filter: sepia(calc(--gompei-count * 0.05)) */
 }
 
 .store {
-    background-color: aqua;
+    background-color: rgb(117, 252, 113);
     text-align: center;
     cursor: pointer;
-    color: black;
+    color: rgb(2, 91, 163);
     position: relative;
 }
 

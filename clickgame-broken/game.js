@@ -58,6 +58,8 @@ function buy(store) {
 
     }
 
+    
+
     // clone node for widget, and add to container
     const widget = store.firstElementChild.cloneNode(true);
     widget.onclick = () => {
@@ -101,7 +103,7 @@ function showPoint(widget) {
     number.className = "point";
     number.innerHTML = "+" + widget.getAttribute("reap");
     number.onanimationend = () => {
-        number.removeChild(widget);
+        widget.removeChild(number);
     }
     widget.appendChild(number);
 }
