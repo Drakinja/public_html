@@ -131,10 +131,3 @@ function showPoint(widget) {
 }
 
 changeScore(0);
-
-function onframe() {
-    angle += 2 * (purple_gompei_count + 1);
-    document.body.style = "--gompei-count: " + super_gompei_count + "; --angle:" + angle + "deg;"
-    requestAnimationFrame(onframe)
-}
-onframe() 
