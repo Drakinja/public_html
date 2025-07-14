@@ -34,9 +34,8 @@ color:green;
     /* filter: sepia(calc(--gompei-count * 0.05)) */
 }
 
-#blue-gompei {
-    filter: hue-rotate(90deg) sepia(calc(var(--gompei-count) * 10%)) saturate(calc(clamp(0, var(--gompei-count), 10) * 40% + 100%));
-    transform: rotateX(90deg);
+.blue-gompei {
+
     /* filter: sepia(calc(--gompei-count * 0.05)) */
 }
 

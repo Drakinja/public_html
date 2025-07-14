@@ -26,6 +26,27 @@ function buy(store) {
     // check available to buy
     if(score <cost)
         return;
+
+    if (store.getAttribute("name") === "Purple-Gompei") {
+        const gompeis = document.querySelectorAll("#widget-container .gompei");
+        let first_gompei = gompeis[0];
+        // if first gompei exists
+        if (first_gompei) {
+            widget_container.insertBefore(widget, first_gompei.parentElement);
+            first_gompei.parentElement.remove();
+            rainbow_gompei_count += 1
+            // first_gompei.classList = "rainbow-gompei"
+            // first_gompei.parentElement.setAttribute("reap", 100);
+            // first_gompei.parentElement.setAttribute("cooldown", .5);
+            changeScore(-cost);
+            widget.setAttribute("harvesting", "");
+            setup_end_harvest(widget);
+
+        }
+        return;
+    }
+
+
     // change score
     changeScore(-cost)
     if (store.getAttribute("name") === "Super-Gompei") {
@@ -57,6 +78,7 @@ function buy(store) {
     
 
     }
+
 
     
 
@@ -109,3 +131,10 @@ function showPoint(widget) {
 }
 
 changeScore(0);
+
+function onframe() {
+    angle += 2 * (purple_gompei_count + 1);
+    document.body.style = "--gompei-count: " + super_gompei_count + "; --angle:" + angle + "deg;"
+    requestAnimationFrame(onframe)
+}
+onframe() 

@@ -8,6 +8,7 @@
     <!-- <link rel="stylesheet" href="overlays.css"> -->
     <link rel="stylesheet" href="styles.css">
     <script src="./game.js" defer></script>
+    <a href="/public_HTML/projects.html" class="return-button">Return</a>
 </head>
 
 <body>
@@ -40,7 +41,7 @@
         onclick="buy(event.currentTarget)">
         <div class="widget" reap="35" cooldown="2.5" auto="true" name="green-Gompei">
             <img src="./gompei.png" id="green-gompei">
-            <div class="overlay-slide" style="animation-duration: 2s;"></div>
+            <div class="overlay-slide" style="animation-duration: 2.5s;"></div>
         </div>
         <p>Green Gompei</p>
         <p>50 points</p>
@@ -72,7 +73,17 @@
         <p>3s</p>
     </div>
 
-
+    <div class="store" name="Purple-Gompei" cost="250" reap="300" cooldown="5" auto="true" src="./gompei.png"
+    onclick="buy(event.currentTarget)">
+    <div class="widget" reap="300" cooldown="5" auto="true" name="Purple-Gompei">
+        <img src="./gompei.png" class="rainbow-gompei">
+        <div class="overlay-slide" style="animation-duration: 5s;"></div>
+    </div>
+    <p>Purple Gompei</p>
+    <p>250 points and <br> a regular gompei</p>
+    <p>+300 sqft</p>
+    <p>5s</p>
+</div>
 
     </div>
     <div id="widget-container"></div>
