@@ -4,6 +4,12 @@ function keyDown(event) {
     // console.log(`KEYDOWN: ${key}`);
 
     switch (key) {
+        case "KeyW":
+            model.paddleL.vely = -PADDLE_VELOCITY;
+            break;
+        case "KeyS":
+            model.paddleL.vely = PADDLE_VELOCITY;
+            break;
         case "ArrowUp":
             model.paddleR.vely = -PADDLE_VELOCITY;
             break;
@@ -26,10 +32,18 @@ function keyUp(event) {
         case "ArrowDown":
             model.paddleR.vely = 0;
             break;
+        case "KeyW":
+        case "KeyS":
+            model.paddleL.vely = 0;
+            break;
+
+
     }
 }
 
 function resetGame() {
+    model.scoreR=0;
+    model.ScoreL=0;
     model.resetGame();
     onTick();
 }

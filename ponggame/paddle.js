@@ -24,7 +24,9 @@ class Paddle {
 
             // control this.vy using ball
             // don't set this.y! (cheating)
-            this.vely = 1;
+            let desired = ball.posy - this.height / 2;
+            let vel = desired - this.posy;
+            this.vely = Math.min(PADDLE_VELOCITY, Math.max(-PADDLE_VELOCITY, vel));
         }
         this.posy = Math.min(BOARD_HEIGHT - this.height, Math.max(0, this.posy + this.vely));
     }
@@ -33,7 +35,7 @@ class Paddle {
         let bounce_dir = Math.sign(BOARD_WIDTH / 2 - this.posx);
         // try bounce ball
         if (ball.posy >= this.posy && ball.posy <= this.posy + this.height && // within y
-            (ball.posx - BALL_RADIUS <= this.posx + this.width || ball.posx + BALL_RADIUS >= this.posx) &&  // within x 
+            (ball.posx - BALL_RADIUS <= this.posx + this.width && ball.posx + BALL_RADIUS >= this.posx) &&  // within x 
             ball.velx * bounce_dir < 0 // ball going into wall
         ) {
             ball.velx = bounce_dir * PADDLE_FORCE * Math.abs(ball.velx);

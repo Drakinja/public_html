@@ -16,9 +16,21 @@ function draw_game(model) {
 }
 
 function draw_ball(ctx, ball) {
-  
+  ctx.fillStyle = "purple"
+  ctx.strokeStyle = "black"
+  ctx.linewidth ="2"
+ 
+  ctx.beginPath();
+  ctx.arc(ball.posx, ball.posy, BALL_RADIUS, 0, 2 * Math.PI);
+  ctx.stroke();
+  ctx.fill();
 }
 
 function draw_paddle(ctx, paddle) {
+    ctx.fillStyle = paddle.color;
+    ctx.strokestyle = "black";
+    ctx.linewidth = 2;
     
+    ctx.fillRect(paddle.posx, paddle.posy, PADDLE_WIDTH, PADDLE_HEIGHT);
+    ctx.strokeRect(paddle.posx, paddle.posy, PADDLE_WIDTH, PADDLE_HEIGHT);
 }
