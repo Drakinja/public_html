@@ -16,7 +16,7 @@ function draw_game(model) {
 }
 
 function draw_ball(ctx, ball) {
-
+  
 }
 
 function draw_paddle(ctx, paddle) {
