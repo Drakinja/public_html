@@ -28,6 +28,7 @@ function draw_ball(ctx, ball) {
 
 function draw_paddle(ctx, paddle) {
     ctx.fillStyle = paddle.color;
+    this.color = "brown";
     ctx.strokestyle = "black";
     ctx.linewidth = 2;
     

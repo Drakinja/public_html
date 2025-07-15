@@ -51,3 +51,9 @@ function resetGame() {
 function set_cpu(event) {
     model.is_cpu = event.target.checked;
 }
+
+function double_cpu(event) {
+    model.is_cpu = event.target.checked;
+    model.double_cpu = event.target.checked;
+    set_cpu = false;
+}
