@@ -1,0 +1,23 @@
+#container{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    aspect-ratio: 1/1;
+    width: 75vh;
+}
+
+.cell{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 250px;
+    border: solid 1px black;
+}  
+body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+.cssisbad{
+    line-height:0;
+}
