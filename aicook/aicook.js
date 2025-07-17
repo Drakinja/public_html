@@ -23,7 +23,7 @@ class AICookApp{
     }
 
 bindEvents(){
-    this.saveApiKeyBtn.addEventListener('click', ())
+    this.saveApiKeyBtn.addEventListener('click', ());
 }
 
 
